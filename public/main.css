@@ -1,0 +1,98 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #eff1f6;
+}
+
+
+.box {
+  border: 3px solid #D6DBE4;
+  background-color: white;
+}
+
+.green-bg {
+  background-color: #eeffee;
+}
+.blue-bg {
+  background-color: #eaf4fb;
+}
+#nav a {
+  color: #94979b;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 14px;
+}
+#nav {
+  margin-right: 3px;
+  margin-bottom: 12px;
+  line-height: 15px;
+  margin-top: 15px;
+}
+.header-box .content {
+  padding-bottom: 5px !important;
+}
+.content {
+  padding: 10px;
+}
+
+.monospaced {
+  font-family: monospace;
+}
+
+.date {
+  font-size: 13px;
+  font-style: italic;
+  color: #333;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.action-link {
+  font-size: 13px;
+  margin-bottom:30px !important;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f5fa;
+}
+
+tr {
+  line-height: 30px;
+}
+
+.content.index {
+  font-size: 15px;
+}
+table {
+  width: 100%;
+  border-collapse:collapse;
+}
+
+td.last {
+  width: 1px;
+  white-space: nowrap;
+}
+
+.edit-textarea {
+  width: 99.3%;
+  resize: vertical;
+  height: 60vh;
+  border-color: darkgrey;
+}
+
+.edit-textarea:focus {
+  outline-width: 0;
+}
+.edit-input {
+  width: 99.4%;
+
+}
+
+.no-highlight {
+  outline-width: 0;
+  border-style: solid;
+  border: 1px solid darkgrey;
+}

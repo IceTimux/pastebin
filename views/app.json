@@ -1,0 +1,11 @@
+{
+  "name": "tDiary",
+  "env": {
+    "USERNAME": {
+      "required": true
+    },
+    "PASSWORD": {
+      "required": true
+    }
+  }
+}
