@@ -1,5 +1,5 @@
 {
-  "name": "tDiary",
+  "name": "pastebin",
   "env": {
     "USERNAME": {
       "required": true
