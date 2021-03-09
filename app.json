@@ -1,11 +1,20 @@
 {
   "name": "pastebin",
   "env": {
-    "USERNAME": {
-      "required": true
-    },
     "PASSWORD": {
       "required": true
+    },
+
+    "USERNAME": {
+      "required": true
     }
-  }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    } 
+  ]
 }
