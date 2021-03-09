@@ -11,5 +11,5 @@ rackup
 ## Running migrations
 
 ```
-sequel -m migrations postgres://host/database
+rake db:migrate
 ```
