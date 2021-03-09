@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   up do
     create_table(:pastes) do
@@ -8,7 +10,7 @@ Sequel.migration do
       DateTime :updated_at, null: false
     end
   end
-  
+
   down do
     drop_table(:pastes)
   end

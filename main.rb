@@ -23,15 +23,15 @@ end
 get '/edit/:paste_id' do
   protected!
   @paste = Paste[params['paste_id']]
-  
+
   erb :edit
 end
 
 post '/delete/:paste_id' do
   protected!
   @paste = Paste[params['paste_id']]
-  
-  # TODO: handle paste deletion 
+
+  # TODO: handle paste deletion
 end
 
 get '/:paste_id' do
