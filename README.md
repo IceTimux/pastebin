@@ -3,6 +3,10 @@
 
 pastebin is a minimalist, open source online pastebin created to be easily deployed to heroku.
 
+# Heroku installation
+Press te deploy to heroku button
+
+# Self-hosted installation
 ## Installing dependencies
 ```
 bundle install
