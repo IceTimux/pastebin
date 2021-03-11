@@ -1,5 +1,8 @@
 {
   "name": "pastebin",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
   "env": {
     "PASSWORD": {
       "required": true
