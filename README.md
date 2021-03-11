@@ -1,10 +1,10 @@
 # pastebin
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/IceTimux/pastebin)
 
-pastebin is a minimalist, open source online pastebin created to be easily deployed to heroku.
+pastebin is a minimalist, open source online pastebin created to be easily deployed to Heroku.
 
 # Heroku installation
-Press the deploy to heroku button
+Press the Deploy to Heroku button
 
 # Self-hosted installation
 ## Installing dependencies
