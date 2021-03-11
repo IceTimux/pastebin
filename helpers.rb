@@ -16,3 +16,11 @@ helpers do
       @auth.credentials == [username, password]
   end
 end
+
+def db_format(date)
+  date.strftime('%Y-%m-%d %H:%M:%S')
+end
+
+def simple_format(date)
+  date.strftime('%B %e %Y @ %H:%M')
+end

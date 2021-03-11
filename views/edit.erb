@@ -1,23 +1,22 @@
+<form method="POST" action="/update/<%= @paste.id %>" id="paste-form">
 
 <div class="box header-box">
   <div class="content">
-      <!-- <b>Untitled</b> -->
-  <input type="text" class="no-highlight edit-input">
+  <input type="text" name="title" class="no-highlight edit-input" value="<%= @paste.title %>" required>
       <br>
-      <span class="date">Created at 20 Jan 2020</span>
-      , <span class="date">Updated at 20 Jan 2020</span>
+      <span class="date">Created at <%= db_format(@paste.created_at) %>, </span>
+      <span class="date">Updated at <%= db_format(@paste.updated_at) %></span>
       <br>
-      <a href="/1" class="action-link">Cancel</a>
+      <a href="/<%= @paste.id %>" class="action-link">Cancel</a>
       |
-      <a class="action-link" href="/1">Save</a>
-      <!-- | -->
-      <!-- <a class="action-link" href="#">Delete</a> -->
+      <a href="" class="action-link" onclick="submitPasteForm(event)">Save</a>
       <div class="pull-right">
-        <a href="" class="action-link">
+        <a href="" class="action-link" onclick="deletePaste(event, <%= @paste.id %>)">
           Delete
         </a>
       </div>
   </div>
 </div>
 <br>
-  <textarea name="" class="edit-textarea green-bg"></textarea>
+  <textarea name="body" class="edit-textarea green-bg" required><%= @paste.body %></textarea>
+</form>

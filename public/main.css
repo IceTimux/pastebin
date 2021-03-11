@@ -96,3 +96,11 @@ td.last {
   border-style: solid;
   border: 1px solid darkgrey;
 }
+
+pre {
+  margin: 0;
+}
+
+.error {
+  border: 1px solid red;
+}

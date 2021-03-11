@@ -1,16 +1,16 @@
 
 <div class="box header-box">
   <div class="content">
-      <b>Untitled</b>
+      <b><%= @paste.title %></b>
       <br>
-      <span class="date">Created at 20 Jan 2020</span>
-      , <span class="date">Updated at 20 Jan 2020</span>
+      <span class="date">Created at <%= simple_format(@paste.created_at) %>,</span>
+      <span class="date">Updated at <%= simple_format(@paste.updated_at) %></span>
       <br>
-      <a class="action-link" href="/raw/1">View Raw</a>
+      <a class="action-link" href="/raw/<%= @paste.id %>">View Raw</a>
       |
-      <a class="action-link" href="/edit/1">Update</a>
+      <a class="action-link" href="/edit/<%= @paste.id %>">Update</a>
       <div class="pull-right">
-      <a class="action-link" href="#">Delete</a>
+      <a class="action-link" href="" onclick="deletePaste(event, <%= @paste.id %>)">Delete</a>
 
       </div>
   </div>
@@ -18,6 +18,6 @@
 <br>
 <div class="box green-bg monospaced">
   <div class="content">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem perferendis neque assumenda mollitia est et cumque, earum dicta autem ut ipsum laboriosam dolorem illo eos odio! Enim sint tempore animi?</p>
+<pre><%= @paste.body %></pre>
   </div>
 </div>

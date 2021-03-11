@@ -1,23 +1,6 @@
-<!-- <div class="box header-box">
-  <div class="content">
-      <b>Untitled</b>
-      <br>
-      <span class="date">20 Jan 2020</span>
-      <br>
-      <a class="view-raw" href="#">View Raw</a>
-  </div>
-</div>
-<br>
-<div class="box green-bg monospaced">
-  <div class="content">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem perferendis neque assumenda mollitia est et cumque, earum dicta autem ut ipsum laboriosam dolorem illo eos odio! Enim sint tempore animi?</p>
-  </div>
-</div> -->
 
-<!-- <br> -->
-
+<% unless @pastes.empty? %>
 <div class="box">
-
   <div class="content index" style="overflow-x:auto;">
     <table>
       <thead>
@@ -25,45 +8,30 @@
           <th style="text-align: left">
           Title
         </th>
-        <th style="text-align: left; width: 100px">
+        <th style="text-align: left; width: 160px">
           When
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-          <a href="/1">Some title</a>
-        </td>
-        <td>
-          12 Jan 2020
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#">Some title</a>
-        </td>
-        <td>
-          12 Jan 2020
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#">Some title</a>
-        </td>
-        <td>
-          12 Jan 2020
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#">Some title</a>
-        </td>
-        <td>
-          12 Jan 2020
-        </td>
-      </tr>
+      <% @pastes.each do |paste|  %>
+        <tr>
+          <td>
+            <a href="/<%= paste.id %>"><%= paste.title %></a>
+          </td>
+          <td>
+            <%= simple_format(paste.created_at) %>
+          </td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
   </div>
 </div>
+<% else %>
+  <div class="box">
+    <div class="content">
+      No pastes found.
+    </div>
+  </div>
+<% end %>

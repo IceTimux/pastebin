@@ -1,14 +1,14 @@
+
+<form method="POST" action="/create" id="paste-form">
 <div class="box header-box">
   <div class="content">
-      <!-- <b>Untitled</b> -->
-  <input type="text" class="no-highlight edit-input" style="margin-bottom: 2px;">
+  <input type="text" name="title" class="no-highlight edit-input" style="margin-bottom: 2px;" required>
       <br>
-      <a href="/1" class="action-link">Cancel</a>
+      <a href="/" class="action-link">Cancel</a>
       |
-      <a class="action-link" href="/1">Save</a>
-      <!-- | -->
-      <!-- <a class="action-link" href="#">Delete</a> -->
+      <a href="" class="action-link" onclick="submitPasteForm(event)">Save</a>
   </div>
 </div>
 <br>
-  <textarea name="" class="edit-textarea green-bg"></textarea>
+<textarea name="body" class="edit-textarea green-bg"></textarea>
+</form>
