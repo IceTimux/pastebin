@@ -10,7 +10,9 @@ Press the Deploy to Heroku button.
 
 1. Install the Heroku CLI
 2. Login to Heroku
-`heroku login`
+```
+heroku login
+```
 3. Create a local git repository with the same name as your heroku app
 ```
 cd myproject/
