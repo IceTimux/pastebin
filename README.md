@@ -31,5 +31,5 @@ git commit -am "updating..."
 git push heroku master
 ```
 
-## Customize
+## Customization
 You can write your own CSS rules inside the `public/theme.css` file.
