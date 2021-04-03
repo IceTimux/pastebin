@@ -4,6 +4,7 @@ require 'sinatra'
 require 'dotenv/load'
 require 'sequel'
 require 'date'
+require 'redcarpet'
 require_relative 'helpers'
 Sequel.connect(ENV['DATABASE_URL'])
 require_relative 'models/paste'
@@ -52,6 +53,14 @@ get '/raw/:paste_id' do
   protected!
   @paste = Paste[params['paste_id']]
   "<pre>#{@paste.body}</pre>"
+end
+
+get '/markdown/:paste_id' do
+  protected!
+  @paste = Paste[params['paste_id']]
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true, fenced_code_blocks: true, strikethrough: true, superscript: true, underline: true, highlight: true, footnotes: true)
+  @paste.body = markdown.render(@paste.body)
+  erb :markdown
 end
 
 post '/delete/:paste_id' do

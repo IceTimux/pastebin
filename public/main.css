@@ -108,3 +108,8 @@ pre {
 .error {
   border: 1px solid red;
 }
+
+.markdown * {
+  font-family: Arial !important;
+
+}

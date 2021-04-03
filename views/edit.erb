@@ -9,6 +9,8 @@
       <br>
       <a href="/<%= @paste.id %>" class="action-link">View</a>
       |
+      <a href="/markdown/<%= @paste.id %>" class="action-link">View Markdown</a>
+      |
       <a href="" class="action-link" onclick="submitPasteForm(event)">Save</a>
       <div class="pull-right">
         <a href="" class="action-link" onclick="deletePaste(event, <%= @paste.id %>)">
