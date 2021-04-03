@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 # Rakefile
-
 namespace :db do
   require 'sequel'
   require 'dotenv/load'

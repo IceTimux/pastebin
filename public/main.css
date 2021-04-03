@@ -16,7 +16,8 @@ html {
 .blue-bg {
   background-color: #eaf4fb;
 }
-#nav a {
+
+#nav .pull-right a {
   color: #94979b;
   text-decoration: none;
   font-weight: bold;
@@ -48,6 +49,8 @@ html {
 
 .logo {
   font-size: 24px;
+  text-decoration: none;
+  color: #222;
 }
 
 .action-link {

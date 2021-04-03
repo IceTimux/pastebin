@@ -6,6 +6,16 @@ A minimalist online pastebin created to be easily deployed to Heroku.
 ## Installation
 Press the Deploy to Heroku button.
 
+## Running migrations
+```
+rake db:migrate:up
+```
+
+## Start server
+```
+rackup
+```
+
 ## Updating
 
 1. Install the Heroku CLI

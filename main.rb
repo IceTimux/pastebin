@@ -39,7 +39,7 @@ post '/update/:paste_id' do
   @paste.body = body
   @paste.updated_at = db_format(Time.now)
   @paste.save
-  redirect "/#{@paste.id}"
+  redirect "/edit/#{@paste.id}"
 end
 
 get '/edit/:paste_id' do

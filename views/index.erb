@@ -17,7 +17,7 @@
       <% @pastes.each do |paste|  %>
         <tr>
           <td>
-            <a href="/<%= paste.id %>"><%= paste.title %></a>
+            <a href="/edit/<%= paste.id %>"><%= paste.title %></a>
           </td>
           <td>
             <%= simple_format(paste.created_at) %>
