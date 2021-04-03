@@ -5,8 +5,8 @@
       <span class="date">Created at <%= simple_format(@paste.created_at) %>,</span>
       <span class="date">Updated at <%= simple_format(@paste.updated_at) %></span>
       <br>
-     <!--  <a class="action-link" href="/raw/<%= @paste.id %>">View Raw</a> -->
-      <a class="action-link" href="/markdown/<%= @paste.id %>">View Markdown</a>
+      <!-- <a class="action-link" href="/raw/<%= @paste.id %>">View Raw</a> -->
+      <a class="action-link" href="/<%= @paste.id %>">View</a>
       |
       <a class="action-link" href="/edit/<%= @paste.id %>">Update</a>
       <div class="pull-right">
@@ -16,10 +16,8 @@
   </div>
 </div>
 <br>
-  <div class="box green-bg monospaced">
+  <div class="box green-bg monospaced markdown">
   <div class="content">
-    <pre>
-      <%= @paste.body %>
-  </pre>
+    <%= @paste.body %>
   </div>
 </div>
