@@ -7,7 +7,6 @@
     "PASSWORD": {
       "required": true
     },
-
     "USERNAME": {
       "required": true
     },
