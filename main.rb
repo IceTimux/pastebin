@@ -26,7 +26,9 @@ post '/create' do
   body =  params['body']
   created_at = db_format(Time.now)
   updated_at = created_at
-  Paste.insert(title: title, body: body, created_at: created_at, updated_at: updated_at)
+  Paste.insert(title: title,
+    body: body, created_at: created_at,
+    updated_at: updated_at)
   paste = Paste.last
   redirect "/#{paste.id}"
 end
@@ -58,7 +60,15 @@ end
 get '/markdown/:paste_id' do
   protected!
   @paste = Paste[params['paste_id']]
-  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true, fenced_code_blocks: true, strikethrough: true, superscript: true, underline: true, highlight: true, footnotes: true)
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+    autolink: true,
+    tables: true,
+    fenced_code_blocks: true,
+    strikethrough: true,
+    superscript: true,
+    underline: true,
+    highlight: true,
+    footnotes: true)
   @paste.body = markdown.render(@paste.body)
   erb :markdown
 end

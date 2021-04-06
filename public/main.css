@@ -16,6 +16,9 @@ html {
 .blue-bg {
   background-color: #eaf4fb;
 }
+.red-bg {
+  background-color: #F8B0AD;
+}
 
 #nav .pull-right a {
   color: #94979b;
@@ -35,10 +38,6 @@ html {
 }
 .content {
   padding: 10px;
-}
-
-.monospaced {
-  font-family: monospace;
 }
 
 .date {
@@ -109,7 +108,13 @@ pre {
   border: 1px solid red;
 }
 
-.markdown * {
-  font-family: Arial !important;
+.green-bg .markdown pre {
+  background-color: #d6e6d6;
+  padding: 10px;
+}
 
+.green-bg .content p code {
+  padding: 2px;
+  background-color: #d6e6d6;
+  border-radius: 2px;
 }
