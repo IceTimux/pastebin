@@ -10,6 +10,9 @@
 
     "USERNAME": {
       "required": true
+    },
+    "APP_NAME": {
+      "required": false
     }
   },
   "addons": [

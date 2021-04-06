@@ -9,7 +9,7 @@ require_relative 'helpers'
 Sequel.connect(ENV['DATABASE_URL'])
 require_relative 'models/paste'
 
-APP_NAME = ENV['NAME'] || 'PasteBin'
+APP_NAME = ENV['APP_NAME'] || 'PasteBin'
 
 get '/' do
   @name = APP_NAME
